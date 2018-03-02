@@ -22,23 +22,15 @@ export default {
       {
         test: /\.jsx?/,
         include: path.join(__dirname, 'client'),
-        loaders: ['react-hot-loader/webpack','babel-loader'],
+        use: ['react-hot-loader/webpack','babel-loader'],
         exclude: /node_modules/
       }, {
         test: /\.scss$/,
         use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
