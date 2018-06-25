@@ -25,6 +25,6 @@ app.listen(3000, (err) => {
   if (err) {
     console.log(err);
   } else {
-    open(`http://localhost:3000/`);
+    open('http://localhost:3000/');
   }
 });
